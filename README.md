@@ -1,53 +1,62 @@
-# Mach 2 Marketing Website (Pass 2)
+# Mach 2 Marketing Website (Pass 3)
 
-Static, GitHub Pages-ready marketing site for **Mach 2 Marketing**.
+Static GitHub Pages marketing site for **Mach 2 Marketing** — **Marketing for Commercial Paving & Pavement Maintenance Contractors**.
 
-## Project structure
+## What's complete
+- Core page set is in place with niche-specific copy and consistent navigation/footer structure.
+- Primary CTA is standardized across the site: **Book Your Commercial Paving Visibility Audit**.
+- Metadata has been improved across major pages (title, description, Open Graph basics).
+- Footer contact placeholders are now clean, explicit launch placeholders (no raw token text).
+- Proof and case study placeholders are intentionally phrased and non-fabricated.
+- Contact and audit forms are structured and currently routed to `thank-you.html` for static-site flow.
+- Legal pages are now presentable launch placeholders with clear legal-review notes.
+
+## Repository structure
 - `index.html` - Homepage
 - `commercial-paving-marketing.html` - Industry page
 - `services.html` - Services
-- `commercial-paving-visibility-audit.html` - Audit landing page
-- `case-studies.html` - Case studies and teardown frameworks
-- `pricing.html` - Pricing/engagement
-- `about.html` - About
-- `contact.html` - Contact
-- `thank-you.html` - Thank-you page
+- `commercial-paving-visibility-audit.html` - Audit page + intake form
+- `case-studies.html` - Case-study/proof framework
+- `pricing.html` - Engagement model
+- `about.html` - Brand rationale and approach
+- `contact.html` - Contact form
+- `thank-you.html` - Submission confirmation page
 - `404.html` - Not found page
-- `privacy.html`, `terms.html` - intentional legal placeholders
-- `assets/css/styles.css` - visual system, layout, component styles
-- `assets/js/site.js` - mobile nav + FAQ interactions
+- `privacy.html`, `terms.html` - Launch placeholder legal pages
+- `assets/css/styles.css` - Styles
+- `assets/js/site.js` - Mobile nav + FAQ behavior
+- `assets/img/favicon-placeholder.png` - Temporary favicon asset
 
-## Pass 2 copy status
-### Finalized launch copy
-- Homepage positioning, hero, pain points, and FAQ
-- Industry page messaging and niche fit narrative
-- Services page (all former placeholder sections replaced)
-- Commercial Paving Visibility Audit page (offer, fit, FAQ, and form guidance)
-- Pricing, About, Contact, Thank-you, and 404 page messaging
-- Metadata updates across primary pages
-
-### Intentional placeholders kept for Pass 3
-- Proof assets (client logos, testimonials, verified screenshots, before/after visuals)
-- Contact details in footer (`[CONTACT PLACEHOLDER]` markers retained because no confirmed real details were provided in repo)
-- Legal language in `privacy.html` and `terms.html` pending attorney-approved copy
-- Hero/section imagery where placeholder blocks are still explicitly labeled
+## Still required before public launch
+1. **Contact details**
+   - Replace footer placeholders with approved business email/phone on all pages.
+2. **Proof assets**
+   - Add approved testimonials, logos, screenshots, and before/after examples.
+3. **Form backend**
+   - Connect audit/contact forms to a real form processor or CRM endpoint.
+4. **Domain and schema**
+   - Replace placeholder domain/schema values (e.g., `https://example.com`) with final production domain.
+5. **Brand assets**
+   - Replace favicon placeholder with final brand favicon.
+6. **Legal review**
+   - Replace placeholder `privacy.html` and `terms.html` with attorney-approved legal text.
 
 ## Local preview
-Open `index.html` directly in a browser, or run a local static server:
-
 ```bash
 python -m http.server 8080
 ```
+Then open: `http://localhost:8080`
 
-Then visit `http://localhost:8080`.
+## GitHub Pages deployment
+1. Push to the publishing branch.
+2. Ensure GitHub Pages is configured to deploy from GitHub Actions.
+3. Confirm custom domain settings only after final production domain is available.
 
-## Deploy to GitHub Pages
-1. Push to the `main` branch.
-2. In GitHub repo settings, enable **Pages** with **GitHub Actions** as source.
-3. Existing GitHub Pages workflow publishes the static site.
-
-## Pass 3 recommended follow-up
-- Replace proof placeholders with approved real client evidence.
-- Replace footer contact placeholders with confirmed business contact data.
-- Add attorney-approved privacy and terms copy.
-- Replace image placeholders with brand-approved photography/screenshots.
+## Final launch checklist
+- [ ] Approved contact details inserted sitewide
+- [ ] Approved proof assets inserted sitewide
+- [ ] Forms connected to live backend/CRM
+- [ ] Final production domain updated in metadata/schema
+- [ ] Favicon and any placeholder imagery replaced
+- [ ] Legal pages replaced with attorney-approved copy
+- [ ] End-to-end QA pass on mobile and desktop
