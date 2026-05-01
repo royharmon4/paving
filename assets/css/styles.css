@@ -28,37 +28,46 @@ img { max-width: 100%; height: auto; display: block; }
 .logo { font-weight: 800; color: #fff; letter-spacing: .03em; }
 .menu-toggle { display: none; background: none; color: #fff; border: 1px solid var(--border); padding: 8px 10px; }
 .nav-links { list-style: none; display: flex; gap: 16px; padding: 0; margin: 0; align-items: center; }
-.btn { display: inline-block; background: var(--accent); color: #1a1a1a; font-weight: 700; padding: 11px 16px; border-radius: 6px; border: 1px solid var(--accent-dark); }
+.btn { display: inline-block; background: var(--accent); color: #1a1a1a; font-weight: 700; padding: 11px 16px; border-radius: 6px; border: 1px solid var(--accent-dark); margin: 8px 10px 0 0; }
 .btn.secondary { background: transparent; color: var(--text); border-color: var(--muted); }
-.hero { padding: 72px 0 52px; background: linear-gradient(180deg, #1b2127 0%, #14181c 100%); }
+.hero { padding: 84px 0 60px; background: linear-gradient(180deg, #1b2127 0%, #14181c 100%); }
 .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center; }
 .kicker { text-transform: uppercase; letter-spacing: .06em; color: var(--accent); font-size: .82rem; }
-h1, h2, h3 { line-height: 1.2; margin: 0 0 10px; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 12px; }
 h1 { font-size: clamp(2rem, 3.8vw, 3.3rem); }
-h2 { font-size: clamp(1.5rem, 2.8vw, 2.2rem); margin-bottom: 18px; }
-section { padding: 60px 0; border-top: 1px solid #1f252c; }
+h2 { font-size: clamp(1.5rem, 2.8vw, 2.2rem); margin-bottom: 14px; }
+p { margin: 0 0 14px; max-width: 72ch; }
+section { padding: 52px 0; border-top: 1px solid #1f252c; }
+main section:first-of-type { border-top: 0; }
 .card-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
-.callout { border-left: 4px solid var(--accent); background: #1b2127; padding: 18px; border-radius: 8px; }
+.card p:last-child { margin-bottom: 0; }
+.callout { border-left: 4px solid var(--accent); background: #1b2127; padding: 18px; border-radius: 8px; margin: 14px 0 26px; }
 .faq-item { border-bottom: 1px solid var(--border); padding: 10px 0; }
 .faq-item button { width: 100%; background: none; color: #fff; border: 0; text-align: left; font-size: 1rem; padding: 10px 0; }
 .faq-answer { display: none; color: var(--muted); }
 .faq-item.open .faq-answer { display: block; }
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px; }
 label { display: block; font-weight: 600; margin-bottom: 5px; }
 input, select, textarea { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: #12161b; color: #fff; }
 textarea { min-height: 110px; }
 .full { grid-column: 1 / -1; }
-.placeholder-img { background: #2c353f; border: 1px dashed #6e7d8a; padding: 50px 20px; text-align: center; color: var(--muted); }
-.site-footer { background: #0d1115; padding: 40px 0; margin-top: 40px; }
+.placeholder-img { background: linear-gradient(180deg, #27303a 0%, #1d252d 100%); border: 1px dashed #7f909f; padding: 38px 22px; text-align: center; color: #d0d7de; border-radius: 10px; margin: 20px 0 12px; }
+.site-footer { background: #0d1115; padding: 34px 0 28px; margin-top: 24px; border-top: 1px solid var(--border); }
 .footer-links { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
 .small { font-size: .9rem; color: var(--muted); }
+.container > :last-child { margin-bottom: 0; }
 @media (max-width: 900px){
+  .hero { padding: 68px 0 50px; }
+  section { padding: 44px 0; }
   .hero-grid, .card-grid, .footer-links { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 700px){
   .menu-toggle { display: inline-block; }
   .nav-links { display: none; position: absolute; left: 0; right: 0; top: 62px; background: #11161b; flex-direction: column; padding: 12px; border-top:1px solid var(--border); }
   .nav-links.show { display: flex; }
+  .hero { padding: 60px 0 44px; }
+  section { padding: 36px 0; }
+  .btn { width: 100%; margin-right: 0; text-align: center; }
   .hero-grid, .card-grid, .form-grid, .footer-links { grid-template-columns: 1fr; }
 }
